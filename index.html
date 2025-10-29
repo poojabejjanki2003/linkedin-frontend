@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Clone</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <i class="bi bi-linkedin linkedin-icon"></i>
+      <h1>LinkedIn</h1>
+    </div>
+    <div class="navbar-right">
+      <span id="user-info">User</span>
+      <button id="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <div class="feed-container">
+      <div class="create-post">
+        <div class="post-top">
+          <i class="bi bi-person-circle avatar"></i>
+          <!-- ✅ Correct IDs for JS -->
+          <form id="postForm">
+            <textarea id="content" placeholder="Start a post..." required></textarea>
+            <button type="submit"><i class="bi bi-send"></i> Post</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Feed will load dynamically -->
+      <div id="feed" class="feed"></div>
+    </div>
+  </div>
+
+  <script src="js/posts.js"></script>
+</body>
+</html>

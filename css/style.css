@@ -1,0 +1,345 @@
+body {
+  background-color: #f3f2ef;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.auth-container {
+  width: 350px;
+  margin: 80px auto;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.auth-container h2 {
+  color: #0a66c2;
+  margin-bottom: 20px;
+}
+
+.auth-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0a66c2;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-container p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+/* Feed post design */
+.post {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.post-header .avatar i {
+  font-size: 40px;
+  color: #0a66c2;
+}
+
+.post-header h4 {
+  margin: 0;
+  color: #0a66c2;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.post-header small {
+  color: gray;
+  font-size: 12px;
+}
+
+.post p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  margin: 10px 0 15px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+
+.post-actions button:hover {
+  color: #0a66c2;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.linkedin-icon {
+  font-size: 30px;
+  color: #0a66c2;
+}
+
+.navbar-left h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.navbar-left span {
+  color: #0a66c2;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logout-btn {
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #004182;
+}
+
+/* ========== FEED ========== */
+body {
+  background: #f3f2ef;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.feed-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.feed-container {
+  width: 600px;
+}
+
+/* ========== CREATE POST BOX ========== */
+.create-post {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.create-post-top {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.create-post-top i {
+  font-size: 40px;
+  color: #0a66c2;
+}
+
+.create-post-top textarea {
+  flex: 1;
+  resize: none;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 12px;
+  font-size: 15px;
+  height: 60px;
+}
+
+.create-post-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.post-options span {
+  margin-right: 20px;
+  font-size: 14px;
+  color: #5e5e5e;
+  cursor: pointer;
+}
+
+.post-options i {
+  color: #0a66c2;
+  margin-right: 5px;
+}
+
+.create-post-bottom button {
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.create-post-bottom button:hover {
+  background: #004182;
+}
+
+/* ========== POST STYLES ========== */
+.post {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.post-header i {
+  font-size: 40px;
+  color: #0a66c2;
+}
+
+.post-header h4 {
+  margin: 0;
+  color: #0a66c2;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.post-header small {
+  color: gray;
+  font-size: 12px;
+}
+
+.post p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  margin: 10px 0 15px;
+}
+
+.post img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+
+.post-actions button:hover {
+  color: #0a66c2;
+}
+/* Update these selectors */
+#postForm textarea,
+#postForm button {
+  font-size: 15px;
+}
+
+#postForm textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  resize: none;
+  height: 70px;
+  outline: none;
+}
+
+#postForm textarea:focus {
+  border-color: #0a66c2;
+}
+
+
