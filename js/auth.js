@@ -1,4 +1,5 @@
-const API = 'https://linkedin-backend-r9ng.onrender.com/api';
+const API = 'https://linkedin-backend-r9nq.onrender.com/api';
+
 
 // SIGNUP
 const signupForm = document.getElementById('signupForm');
