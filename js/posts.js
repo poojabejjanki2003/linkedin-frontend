@@ -8,18 +8,27 @@ const user = JSON.parse(localStorage.getItem('user') || '{}');
 document.getElementById('user-info').innerText = user?.name || 'Guest';
 
 // Redirect if not logged in (optional, depending on your design)
-if (!token) {
+if (!token || !user?.name) {
   alert("Please log in first!");
   window.location.href = 'login.html';
 }
 
+
 // Load feed
 async function loadFeed() {
   try {
-    const res = await fetch(`${API}/posts`);
+    const res = await fetch(`${API}/posts`, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+
+    if (!res.ok) throw new Error(`Failed to load feed: ${res.status}`);
     const posts = await res.json();
 
     const feed = document.getElementById('feed');
+    if (!Array.isArray(posts)) throw new Error('Posts response is not an array');
+
     feed.innerHTML = posts.map(p => `
       <div class="post">
         <h4>${p.name}</h4>
@@ -31,37 +40,3 @@ async function loadFeed() {
     console.error("Error loading feed:", err);
   }
 }
-loadFeed();
-
-// Post creation
-const postForm = document.getElementById('postForm');
-postForm.addEventListener('submit', async e => {
-  e.preventDefault();
-  const content = document.getElementById('content').value.trim();
-
-  if (!content) return alert('Post content cannot be empty!');
-
-  try {
-    const res = await fetch(`${API}/posts`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
-      body: JSON.stringify({ content })
-    });
-
-    if (res.ok) {
-      document.getElementById('content').value = '';
-      loadFeed();
-    } else if (res.status === 401 || res.status === 403) {
-      alert('Session expired. Please log in again.');
-      localStorage.removeItem('token');
-      window.location.href = 'login.html';
-    } else {
-      alert('Failed to post.');
-    }
-  } catch (err) {
-    console.error("Error posting content:", err);
-  }
-});
